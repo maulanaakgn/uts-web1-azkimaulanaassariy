@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Waktu pembuatan: 24 Nov 2023 pada 09.41
+-- Waktu pembuatan: 24 Nov 2023 pada 09.44
 -- Versi server: 10.4.28-MariaDB
 -- Versi PHP: 8.2.4
 
@@ -64,8 +64,7 @@ CREATE TABLE `data_register` (
 --
 
 INSERT INTO `data_register` (`id`, `namadepan`, `namabelakang`, `email`, `nohp`, `password`) VALUES
-(7, 'Azki', 'Maulana Assariy', 'maulanaazkiassariy@gmail.com', '08986921583', '2a51fe345ecf4be0e73674a489c1776afcd446fb5fd904cd9acb46a7fcdfae17'),
-(9, 'Azizi', 'Shafaa Asadel', 'aziziasadel@gmail.com', '08986945354', '2a51fe345ecf4be0e73674a489c1776afcd446fb5fd904cd9acb46a7fcdfae17');
+(1, 'Azki', 'Maulana Assariy', 'maulanaazkiassariy@gmail.com', '08986921583', '2a51fe345ecf4be0e73674a489c1776afcd446fb5fd904cd9acb46a7fcdfae17');
 
 --
 -- Indexes for dumped tables
