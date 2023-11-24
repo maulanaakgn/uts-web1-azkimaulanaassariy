@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../bootstrap-4.1.3-dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <title>Catalyst ID</title>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark shadow-lg fixed-top">
+        <a class="navbar-brand" href="index.html">Catalyst ID</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse text-right" id="navbarText">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <div class="container-fluid informasi">
+        <div class="container">
+            <section id="tentangkami-info" style="display: none;">
+                <h2 style="background-color: rgba(226, 226, 226, 0.975); text-align: center; padding: 5px 10px; border-radius: 10px;"><b>Tentang Kami</b></h2>
+                <p class="mt-4" style="background-color: rgba(226, 226, 226, 0.975); padding: 5px 10px; border-radius: 10px;">Selamat datang di Catalyst ID, sebuah perusahaan yang mengejar inovasi dan kreativitas dalam industri game. Didirikan dengan hasrat untuk menghadirkan pengalaman gaming yang tidak hanya memikat tetapi juga mengubah cara kita berinteraksi dengan dunia digital. Sejak awal perjalanan kami, kami telah fokus pada pengembangan game yang tidak hanya berkualitas tinggi dari segi grafis dan gameplay, tetapi juga mampu menyentuh hati para pemainnya.
+                    Catalyst ID didirikan oleh sekelompok profesional game berbakat yang berkomitmen untuk menjadikan hiburan digital lebih mendalam dan bermakna. Tim kami terdiri dari ahli desain game, pengembang perangkat lunak, dan kreatif berbakat lainnya yang bersatu untuk menciptakan dunia game yang tak tertandingi.</p>
+            </section>
+            
+            <section id="visimisi-info" style="display: none;">
+                <h2 style="background-color: rgba(226, 226, 226, 0.975); text-align: center; padding: 5px 10px; border-radius: 10px;"><b>Visi Misi</b></h2>
+                <p class="mt-4" style="background-color: rgba(226, 226, 226, 0.975); padding: 5px 10px; border-radius: 10px;">Visi kami di Catalyst ID adalah menjadi pelopor dalam membawa inovasi dan kreativitas ke dunia game. Kami ingin menciptakan pengalaman bermain game yang memotivasi, menghibur, dan menginspirasi. Melalui misi kami, kami berkomitmen untuk terus mengeksplorasi batas-batas teknologi game, menciptakan produk-produk yang mendefinisikan standar baru, dan membangun komunitas gamer yang kokoh.
+                    Dengan memadukan keahlian teknologi tinggi dan bakat kreatif, kami bermimpi untuk menjadi agen perubahan dalam dunia hiburan interaktif, memberikan setiap pemain pengalaman yang tak terlupakan.</p>
+            </section>
+            
+            <section id="nilaiperusahaan-info" style="display: none;">
+                <h2 style="background-color: rgba(226, 226, 226, 0.975); text-align: center; padding: 5px 10px; border-radius: 10px;"><b>Nilai Perusahaan</b></h2>
+                <p class="mt-4" style="background-color: rgba(226, 226, 226, 0.975); padding: 5px 10px; border-radius: 10px;">Nilai-nilai kami di Catalyst ID mencerminkan komitmen kami terhadap integritas, kolaborasi, dan keunggulan. Kami meyakini bahwa melalui kerja sama tim yang erat dan dedikasi terhadap nilai-nilai ini, kami dapat menciptakan produk-game yang tidak hanya menghibur tetapi juga memberikan dampak positif pada komunitas kami. Integritas adalah landasan bisnis kami, dan kami memprioritaskan kepuasan pelanggan dalam setiap langkah.</p>
+            </section>
+
+            <section id="produk-info" style="display: none;">
+                <h2 style="background-color: rgba(226, 226, 226, 0.975); text-align: center; padding: 5px 10px; border-radius: 10px;"><b>Produk Unggulan</b></h2>
+                <p class="mt-4" style="background-color: rgba(226, 226, 226, 0.975); padding: 5px 10px; border-radius: 10px;">Catalyst ID bangga mempersembahkan rangkaian produk unggulan di dunia game. Mulai dari platform gaming terdepan hingga game-game inovatif, setiap produk kami dirancang dengan cermat untuk memenuhi ekspektasi tinggi para pemain. Grafis yang memukau, cerita yang mendalam, dan fitur-fitur inovatif menjadikan setiap game kami sebagai pengalaman yang luar biasa.
+                    Dengan fokus pada detail dan kualitas, kami terus berusaha untuk menjadi yang terdepan dalam memberikan pengalaman gaming yang menghibur, mendidik, dan mempesona.</p>
+            </section>
+        </div>
+    </div>
+    <footer>
+        <p class="fixed-bottom" style="background-color: rgba(0, 0, 0, 0.1); text-align: center; display: inline-block; width: 100%; padding: 10px 0;">@Copyright by 21552011144_AZKI MAULANA ASSARIY_TIF 221B</p>
+    </footer>
+<script>
+    function getTopicFromUrl() {
+        const urlParams = new URLSearchParams(window.location.search);
+        return urlParams.get('topic');
+    }
+
+    function showContentForTopic(topic) {
+        document.getElementById('tentangkami-info').style.display = 'none';
+        document.getElementById('visimisi-info').style.display = 'none';
+        document.getElementById('nilaiperusahaan-info').style.display = 'none';
+        document.getElementById('produk-info').style.display = 'none';
+
+        document.getElementById(`${topic}-info`).style.display = 'block';
+    }
+
+    document.addEventListener('DOMContentLoaded', function () {
+        const topic = getTopicFromUrl();
+
+        if (topic) {
+            showContentForTopic(topic);
+        }
+    });
+</script>
+
+</body>
+</html>

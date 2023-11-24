@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../bootstrap-4.1.3-dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <title>Catalyst ID</title>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark shadow-lg fixed-top">
+        <a class="navbar-brand" href="index.html">Catalyst ID</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse text-right" id="navbarText">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <div class="container-fluid banner3"></div>
+    <div class="container cont">
+        <div class="form-container">
+            <form action="../Project1/insertData/insert.php" id="registrationForm" method="post">
+                <div class="form-row">
+                    <div class="form-group col-md-6">
+                        <label class="lbl" for="contoh1">Nama Depan</label>
+                        <input class="inputr" type="text" class="form-control" id="namadp" name="namaDepan" required placeholder="Masukkan Nama Depan">
+                    </div>
+                    <div class="form-group col-md-6">
+                        <label class="lbl" for="contoh2">Nama Belakang</label>
+                        <input class="inputr" type="text" class="form-control" id="namabl" name="namaBelakang" required placeholder="Masukkan Nama Belakang">
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-group col-md-6">
+                        <label class="lbl" for="contoh1">Email</label>
+                        <input class="inputr" type="text" class="form-control" id="emailr" name="email" required placeholder="Masukkan Email">
+                    </div>
+                    <div class="form-group col-md-6">
+                        <label class="lbl" for="contoh2">No. Hp</label>
+                        <input class="inputr" type="text" class="form-control" id="nohp" name="nohp" required placeholder="Masukkan No. Hp">
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-group col-md-12">
+                        <label class="lbl" for="contoh2">Password</label>
+                        <br>
+                        <input class="inputr2" type="text" id="passwordr" name="password" required placeholder="Masukkan password">
+                    </div>
+                </div>                
+                <div class="form-row">
+                    <div class="form-group col-md-12">
+                        <label class="lbl" for="contoh2">Konfirmasi Password</label>
+                        <div class="wrapper1">
+                            <input class="input1r" type="password" id="kon-password" placeholder="Kofirmasi ulang password">
+                            <button class="eyeBtn" id="eyeBtn" type="button"><i class="fas fa-eye-slash"></i></button>
+                            <script>
+                                document.getElementById('eyeBtn').addEventListener('click', function () {
+                                var passwordInput = document.getElementById('kon-password');
+                                var eyeIcon = document.querySelector('.eyeBtn i');
+
+                                if (passwordInput.type === 'password') {
+                                    passwordInput.type = 'text';
+                                    eyeIcon.classList.remove('fa-eye-slash');
+                                    eyeIcon.classList.add('fa-eye');
+                                } else {
+                                    passwordInput.type = 'password';
+                                    eyeIcon.classList.remove('fa-eye');
+                                    eyeIcon.classList.add('fa-eye-slash');
+                                }
+                            });
+                            </script>
+                        </div>
+                    </div>
+                </div>
+                <br>
+                <p class="check-box"><input class="c" id="terms" type="checkbox" onclick="agree()" name="terms" value="on" /> Saya menyetujui</p>
+                <div class="form-row">
+                    <div class="form-group col-md-4">
+                    </div>
+                    <div class="form-group col-md-4">
+                    </div>
+                    <div class="form-group col-md-4">
+                        <input class="btn-regis" disabled type="submit" value="Register">
+                    </div>
+                </div>
+                
+            </form>
+        </div>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="index.js"></script>
+    <script src="script.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"></script>
+    <script src="../bootstrap-4.1.3-dist/js/bootstrap.min.js"></script>
+</body>
+</html>

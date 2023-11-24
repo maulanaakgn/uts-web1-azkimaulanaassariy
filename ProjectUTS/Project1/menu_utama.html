@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../bootstrap-4.1.3-dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <title>Catalyst ID</title>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark shadow-lg fixed-top">
+        <a class="navbar-brand" href="menu_utama.html">Catalyst ID</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse text-right" id="navbarText">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="menu_utama.html">Home <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#detail">Layanan</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="../Project1/insertData/logout.php">Logout</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <div class="container-fluid banner1">
+        <div class="container text-center">
+            <h4 class="display-4 mb-5 welcome" id="greeting" style="background-color: rgba(0, 0, 0, 0.1); display: inline-block; padding: 5px 10px; border-radius: 10px; backdrop-filter: blur(5px);"></h4>
+            <br>
+            <a href="#detail">
+                <button type="button" class="btn btn-danger btn-lg">Layanan</button>
+            </a>
+        </div>
+    </div>
+    <div class="container-fluid pt-5 pb-5" id="detail">
+        <div class="container text-center">
+            <h2 class="display-3">Layanan</h2>
+            <p>kami menawarkan keahlian teknis tinggi untuk memenuhi kebutuhan pengembangan perangkat lunak dan game.</p>
+            <div class="row pt-4">
+                <div class="col-md-4 roundsquare">
+                    <span class="circle">
+                        <i class="fa-solid fa-layer-group fa-4x"></i>
+                    </span>
+                    <h3 style="font-size:25px;" class="mt-3">Pengembangan Game</h3>
+                    <p style="font-size:14px;">Tim kreatif kami ahli dalam mengembangkan game lintas platform, membantu mewujudkan visi game Anda dari perancangan hingga peluncuran.</p>
+                </div>
+                <div class="col-md-4 roundsquare">
+                    <span class="circle">
+                        <i class="fa-solid fa-code fa-4x"></i>
+                    </span>
+                    <h3 style="font-size:25px;" class="mt-3">Optimisasi Kode</h3>
+                    <p style="font-size:14px;">Kami menyediakan layanan optimisasi kode untuk meningkatkan kinerja, keamanan, dan skalabilitas proyek perangkat lunak Anda.</p>
+                </div>
+                <div class="col-md-4 roundsquare">
+                    <span class="circle">
+                        <i class="fa-solid fa-rocket fa-4x"></i>
+                    </span>
+                    <h3 style="font-size:25px;" class="mt-3">Aplikasi Kustom</h3>
+                    <p style="font-size:14px;">Catalyst ID menciptakan aplikasi kustom sesuai kebutuhan bisnis atau proyek Anda, dengan fokus pada keamanan dan kinerja tinggi.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <p style="background-color: rgba(0, 0, 0, 0.1); text-align: center; display: inline-block; width: 100%; padding: 10px 0;">@Copyright by 21552011144_AZKI MAULANA ASSARIY_TIF 221B</p>
+    </footer>
+    <script>
+        const params = new URLSearchParams(window.location.search);
+        const nama = params.get('nama');
+    
+        if (nama) {
+            document.getElementById('greeting').innerText = "Hai, " + nama + "!";
+        }
+    </script>
+    <script src="index.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"></script>
+    <script src="../bootstrap-4.1.3-dist/js/bootstrap.min.js"></script>
+</body>
+</html>
